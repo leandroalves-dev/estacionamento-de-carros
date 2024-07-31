@@ -1,0 +1,92 @@
+.listRegister{
+    margin: 2rem 0;
+}
+
+.listRegister h2{
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+.listRegister .list{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0.6rem;
+}
+
+.listRegister .list-title span{
+    background: #4b7639;
+    color: #FFF;
+}
+
+.listRegister .list-title span i{
+    margin-right: .4rem;
+}
+
+.listRegister .list:not(.list-title) span{
+    background: #78a74f;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 0.8rem 0.6rem;
+    width: 100%;
+    max-width: 306px;
+}
+
+.listRegister .list:not(.list-title) span.btns{
+    padding: 0;
+    display: flex;
+}
+
+.listRegister .list:not(.list-title):nth-child(2n+1) span{
+    background-color: #78a74fb8;
+}
+
+.listRegister .list span{
+    width: 100%;
+    padding: 1.2rem 0.6rem;
+    text-transform: uppercase;
+}
+
+.listRegister button{
+    padding: 0;
+    cursor: pointer;
+    border-right: 1px solid #FFF;
+    margin: 0;
+    width: 100%;    
+}
+
+
+.listRegister button:last-child{
+    border: 0;
+}
+
+
+@media(max-width:767px){
+    .listRegister .list span{
+        font-size: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .listRegister .list{
+        gap: 0;
+    }
+
+    .listRegister{
+        padding: 0 0.5rem;
+    }
+
+    .listRegister button{
+        padding: 10px 15px;
+        border: 0;
+        border-bottom: 1px solid #FFF;
+    }
+
+    .listRegister .list:not(.list-title) span{
+        justify-content: center;
+        border-right: 1px solid #FFF;
+    }
+}

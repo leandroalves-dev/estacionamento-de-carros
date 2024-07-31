@@ -1,0 +1,18 @@
+.header{
+    padding: 2.5rem 1rem;
+    text-align: center;
+    background: #1a3e20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #b7e669;
+    margin-left: 1rem;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
