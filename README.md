@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Meu Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um sistema simples de estacionamento de carros. Permite o admin cadastrar a entrada, valida se a placa já existe, opção para editar, calcular a horario que o carro ficou no pátio, quanto vai pagar e a opção de excluir o carro do pátio. 
 
-Currently, two official plugins are available:
+## Tecnologias usadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=javascript&logoColor=white) 
+- ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) 
+- ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)
+- ![Responsivo](https://img.shields.io/badge/Responsivo-Sim-00C853?style=for-the-badge&logo=responsive&logoColor=white)  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Como rodar o projeto
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone este repositório:
+   ```bash
+    git clone https://github.com/leandroalves-dev/estacionamento-de-carros
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Instale as dependências:
+   ```bash
+   npm install
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Rode o projeto
+    ```bash
+    npm run dev
