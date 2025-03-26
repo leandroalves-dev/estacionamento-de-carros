@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-import './RegisterServices.css';
-import './ListServices.css';
+
+
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +11,7 @@ import { IServices } from '../Interfaces/IServices';
 import ListServices from './ListServices';
 import Modal from '../Modal/Modal';
 import CheckoutModal from '../Modal/CheckoutModal';
+import Container from '../Container/Container';
 
 type ModalType = 'none' | 'edit' | 'checkout';
 
@@ -58,7 +59,10 @@ const RegisterServices = () => {
     }else{
       
       if(cars.some(carPlaca => carPlaca.placa === placa )){
-          toast.info('Essa placa já foi registrada. Favor tente novamente!')
+          toast.info('Essa placa já foi registrada. Favor tente novamente!');
+          setTimeout( () => {
+            setPlaca('')
+          },2000)
           return
       }else{
         if(!validateCar(placa)){
@@ -142,25 +146,27 @@ const RegisterServices = () => {
     <>
       <ToastContainer position="top-right" autoClose={1200} pauseOnHover={false} />
       
-      <div className="register-container">
-          <div className="container">
-            <form onSubmit={handleSubmit}>
-              <div className='fields'>
-                <label htmlFor="modelo">Modelo do Veículo</label>
-                <input type="text" name='modelo' value={modelo} onChange={(e) => setModelo(e.target.value)} />
+      <div className="bg-neutral-800 p-6 border-t-neutral-700 border-1">
+          <Container>
+
+            <form onSubmit={handleSubmit} className='flex flex-row w-full gap-3 max-w-[860px] mx-auto max-sm:flex-col max-sm:gap-0'>
+              <div className='flex flex-col mb-2 w-full'>
+                <label htmlFor="modelo" className='text-neutral-500'>Modelo do Veículo</label>
+                <input className='uppercase border border-neutral-700 h-12 w-full p-2 focus:outline-none text-neutral-400 font-normal' type="text" name='modelo' value={modelo} onChange={(e) => setModelo(e.target.value)} />
               </div>
-              <div className='fields'>
-                <label htmlFor="placa">Placa do Veículo</label>
-                <input type="text" name='placa' value={placa} onChange={handleMasc}  />
+              <div className='flex flex-col mb-2 w-full'>
+                <label htmlFor="placa" className='text-neutral-500'>Placa do Veículo</label>
+                <input className='uppercase border border-neutral-700 h-12 w-full p-2 focus:outline-none text-neutral-400 font-normal' type="text" name='placa' value={placa} onChange={handleMasc}  />
               </div>
-              <div className='fields'> 
-                <label htmlFor="entrada">Hora de Entrada</label>
-                <input type="text" name='entrada' value={entrada} readOnly  />
+              <div className='flex flex-col mb-2 w-full'> 
+                <label htmlFor="entrada" className='text-neutral-500'>Hora de Entrada</label>
+                <input className='uppercase border border-neutral-700 h-12 w-full p-2 focus:outline-none text-white' type="text" name='entrada' value={entrada} readOnly  />
               </div>
-              <button>Registrar</button>
+              <button className='bg-neutral-700 text-neutral-900 h-12 mt-6 p-3 pr-6 pl-6 cursor-pointer'>Registrar</button>
             </form>
-            {cars.length > 0 && <p className='qtdaCar'>{cars.length}</p>}
-          </div>
+            {cars.length > 0 && <p className='bg-neutral-800 text-neutral-600 absolute top-10 right-10 p-1 pr-3 pl-3 rounded'>{cars.length}</p>}
+
+          </Container>
       </div>
 
       <ListServices myCars={cars} onEdit={handleEdit} onCheckout={handleCheckout} />      

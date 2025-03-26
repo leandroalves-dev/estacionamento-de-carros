@@ -1,16 +1,10 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import "tailwindcss";
+
 
 body{
   font-family: 'Lato', sans-serif;
 }
 
-main{
-  min-height: 60vh;
-}
 
 .container{
   width: 100%;

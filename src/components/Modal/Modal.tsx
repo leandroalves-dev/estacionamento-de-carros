@@ -1,6 +1,6 @@
 import { IServices } from '../Interfaces/IServices'
-import './Modal.css'
 
+import Input from '../Input/Input';
 interface PropsModal{
     currentTitle: IServices;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -11,27 +11,24 @@ interface PropsModal{
 const Modal = ({onClose, currentTitle, onSave, onChange}: PropsModal) => {
   
  return (
-    <div className="modal" style={{ display: 'block' }}>
-        <div className="modal-content">
-        <span className="close" onClick={onClose}>&times;</span>
-        <h2>Editar Veículo</h2>
-            <div className='content'>
-                <div className='fields'>
-                  <label htmlFor="modelo">Modelo do Veículo</label>
-                  <input type="text" name='modelo' value={currentTitle.modelo} onChange={onChange} />
-                </div>
-                <div className='fields'>
-                  <label htmlFor="placa">Placa do Veículo</label>
-                  <input type="text" name='placa' value={currentTitle.placa} onChange={onChange} />
-                </div>
-                <div className='fields'>
-                  <label htmlFor="entrada">Hora de Entrada</label>
-                  <input type="text" name='entrada' value={currentTitle.entrada} readOnly />
-                </div>
-                <button onClick={onSave}>Salvar</button>
-            </div>
-        </div>
+  <div className="fixed z-10 inset-0 flex justify-center items-center bg-neutral-800 max-sm:px-4" style={{ backgroundColor: 'rgba(31, 41, 55, 0.9)' }}>
+    <div className="relative bg-white max-w-[600px] w-full p-6">
+        <span className="absolute top-2 right-3 text-2xl cursor-pointer" onClick={onClose}>&times;</span>
+          <h2 className="text-neutral-900 text-center mb-4 text-2xl font-bold">Editar Veículo</h2>
+          <div className="flex flex-row gap-4 max-sm:gap-1">
+
+                <Input type='text' label="Modelo do Veículo" name="modelo" value={currentTitle.modelo} onChange={onChange} />
+                <Input type='text' label="Placa do Veículo" name="placa" value={currentTitle.placa} onChange={onChange} />
+                <Input type='text' label="Hora de Entrada" name="entrada" value={currentTitle.entrada} readOnly />
+
+                <button className="bg-neutral-600 h-10 text-white pr-6 pl-6 mt-6 cursor-pointer max-sm:mt-8 max-sm:text-xs" onClick={onSave}>
+                    Salvar
+                </button>
+
+          </div>
+      </div>
     </div>
+
   )
 }
 

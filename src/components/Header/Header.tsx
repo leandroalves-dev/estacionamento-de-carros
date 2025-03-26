@@ -1,13 +1,8 @@
-import './Header.css'
-
-import Logo from '../../assets/logo.png'
-
 const Header = () => {
   return (
-      <header className='header'>
-        <img src={Logo} alt="" />
-        <h2>PlusPark</h2>
-      </header>
+    <header className='flex justify-center items-center h-52 bg-neutral-900'>
+		<h1 className='text-4xl text-white font-bold'>PlusPark</h1>
+    </header>
   )
 }
 
