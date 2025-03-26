@@ -2,6 +2,8 @@
 
 Este é um sistema simples de estacionamento de carros. Permite o admin cadastrar a entrada, valida se a placa já existe, opção para editar, calcular a horario que o carro ficou no pátio, quanto vai pagar e a opção de excluir o carro do pátio. 
 
+As informações cadastradas são armazenadas no localStorage.
+
 ## Tecnologias usadas
 
 - ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=javascript&logoColor=white) 
