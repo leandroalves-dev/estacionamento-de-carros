@@ -1,8 +1,8 @@
 # Meu Projeto
 
-Este é um sistema simples de estacionamento de carros. Permite o admin cadastrar a entrada, valida se a placa já existe, opção para editar, calcular a horario que o carro ficou no pátio, quanto vai pagar e a opção de excluir o carro do pátio. 
+Este sistema permite que o administrador registre a entrada de veículos, valide se a placa já está cadastrada, edite informações, calcule o tempo de permanência no pátio e o valor a ser pago, além de oferecer a opção de remover o veículo do sistema.
 
-As informações cadastradas são armazenadas no localStorage.
+Todos os dados são armazenados localmente utilizando o localStorage, sem necessidade de integração com banco de dados.
 
 ## Tecnologias usadas
 
