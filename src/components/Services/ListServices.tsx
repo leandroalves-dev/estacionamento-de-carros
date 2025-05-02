@@ -19,8 +19,8 @@ const ListServices = ({ myCars, onEdit, onCheckout, loading }: PropsServices) =>
             {loading ? (
                 <Loading />
             ) : myCars.length === 0 ? (
-                <div className='h-72 flex flex-col justify-center items-center'>
-                    <h2 className='mt-6 mb-6 text-center font-bold text-2xl'>Não temos veículos no pátio</h2>
+                <div className='flex flex-col justify-center items-center bg-white/20 backdrop-blur-md min-h-[calc(100vh-355px)]'>
+                    <h2 className='mt-6 mb-6 text-center text-2xl text-white'>Não temos veículos no pátio</h2>
                 </div>
             ) : (
                 <>
