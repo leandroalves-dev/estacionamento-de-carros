@@ -73,7 +73,7 @@ const CheckoutModal = ({car, onClose, onPayment}: CheckoutModalProps ) => {
                 <div className="flex flex-row gap-4 max-sm:gap-1">
                     <Input type="text" label="Hora de entrada:" name="horaEntrada" value={car.entrada}  />
                     <Input type="time" label="Hora de saída:" name="horaSaida" value={manualTime} onChange={handleManualTimeChange}  />
-                    <button className="bg-neutral-600 h-10 text-white pr-6 pl-6 mt-6 cursor-pointer max-sm:mt-4" onClick={calculateDifference}>Calcular</button>
+                    <button className="bg-sky-400/40 backdrop-blur-md h-10 text-neutral-800 pr-6 pl-6 mt-6 cursor-pointer max-sm:mt-4" onClick={calculateDifference}>Calcular</button>
                 </div>
                 {result && (
                     <div className="flex items-center justify-between mt-6">

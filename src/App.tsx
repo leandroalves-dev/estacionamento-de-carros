@@ -6,13 +6,13 @@ import RegisterServices from './components/Services/RegisterServices'
 
 function App() {
   return (
-    <>
+    <div className="relative w-full h-full bg-cover bg-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, #000 100%), url('background.jpg')" }}>
       <Header />
         <main>
           <RegisterServices />          
         </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
